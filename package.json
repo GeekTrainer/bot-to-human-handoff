@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "test": "mocha -r ts-node/register src/tests/*.ts"
+  },
+  "dependencies": {
+    "botbuilder": "^4.2.0",
+    "botframework-config": "^4.2.0",
+    "botframework-schema": "^4.2.0",
+    "restify": "^7.6.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/restify": "^7.2.7",
+    "@types/sinon": "^7.0.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.3",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.2.4"
+  }
+}
