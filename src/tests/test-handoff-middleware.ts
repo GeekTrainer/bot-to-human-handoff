@@ -86,7 +86,7 @@ describe('User messages routed', () => {
         expect(activitiesQueue.length).equals(1);
         const actual = activitiesQueue[0];
         expect(actual.text).equals(sampleActivity.text);
-        expect(actual.recipient.name).equals(handoffUser.agentReference.user.name);
+        expect(actual.recipient.id).equals(handoffUser.agentReference.user.id);
         expect(adapter.activityBuffer.length).equals(0);
     });
 
@@ -99,7 +99,7 @@ describe('User messages routed', () => {
 
         expect(spy.calledWith(handoffUser)).to.be.true;
         expect(activitiesQueue.length).equal(1);
-        expect(activitiesQueue[0].recipient.name).equal('user');
+        expect(activitiesQueue[0].recipient.id).equal('user');
         expect(activitiesQueue[0].text).equal('Putting you in queue for agent');
     });
 
@@ -119,10 +119,10 @@ describe('User messages routed', () => {
         expect(spy.calledWith(handoffUser)).to.be.true;
         expect(activitiesQueue.length).equal(2);
         // message to user
-        const userActivity = activitiesQueue.find(a => a.recipient.name === 'user');
+        const userActivity = activitiesQueue.find(a => a.recipient.id === 'user');
         expect(userActivity.text).equal('You are reconnected to the bot');
         
-        const agentActivity = activitiesQueue.find(a => a.recipient.name === 'agent');
+        const agentActivity = activitiesQueue.find(a => a.recipient.id === 'agent');
         expect(agentActivity.text).equal('You are reconnected to the bot');
     });
 
@@ -136,7 +136,7 @@ describe('User messages routed', () => {
         expect(spy.calledWith(handoffUser));
         // message to user
         expect(activitiesQueue.length).equal(1);
-        expect(activitiesQueue[0].recipient.name).equal('user');
+        expect(activitiesQueue[0].recipient.id).equal('user');
         expect(activitiesQueue[0].text).equal('You are reconnected to the bot')
     })
 });
