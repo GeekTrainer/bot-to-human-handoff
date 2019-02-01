@@ -15,7 +15,7 @@ export const HandoffMiddleware = (handoffProvider: HandoffProvider): Middleware 
                 return next();
             }
 
-            if (context.activity.from.name && context.activity.from.name.toLowerCase().startsWith('agent')) {
+            if (context.activity.from.id && context.activity.from.id.toLowerCase().startsWith('agent')) {
                 await runAgent(context, next);
             } else {
                 await runUser(context, next);
