@@ -13,9 +13,10 @@
       $(() => {
           $('#set-username').click(() => {
             window.WebChat.renderWebChat({
-                directLine: window.WebChat.createDirectLine({ secret: 'MrTopOk6ubg.cwA.p70.JjxEP05xBeX0JuSseeVJJcasfUMymFcM_P66-rAcmNI' }),
-                userID: $('#user-id').val(),
-                userName: $('#user-id').val()
+                directLine: window.WebChat.createDirectLine({
+                   secret: 'MrTopOk6ubg.cwA.p70.JjxEP05xBeX0JuSseeVJJcasfUMymFcM_P66-rAcmNI'
+                }),
+                userID: $('#user-id').val()
             }, document.getElementById('webchat'));
           });
       });
