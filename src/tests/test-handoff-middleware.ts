@@ -137,6 +137,6 @@ describe('User messages routed', () => {
         // message to user
         expect(activitiesQueue.length).equal(1);
         expect(activitiesQueue[0].recipient.id).equal('user');
-        expect(activitiesQueue[0].text).equal('You are reconnected to the bot')
+        expect(activitiesQueue[0].text).equal('You are reconnected to the bot');
     })
 });
