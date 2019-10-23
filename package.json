@@ -1,24 +1,29 @@
 {
   "scripts": {
-    "test": "mocha -r ts-node/register src/tests/*.ts"
+    "test": "mocha -r ts-node/register src/tests/*.ts",
+    "build-dev": "tsc",
+    "start-dev": "nodemon ./lib/app.js",
+    "start": "node ./lib/app.js",
+    "build": "tsc"
   },
   "dependencies": {
-    "botbuilder": "^4.2.0",
-    "botframework-config": "^4.2.0",
-    "botframework-schema": "^4.2.0",
-    "dotenv": "^6.2.0",
-    "restify": "^7.6.0"
+    "botbuilder": "^4.6.0-preview1",
+    "botframework-config": "^4.6.0-preview1",
+    "botframework-schema": "^4.6.0-preview1",
+    "dotenv": "^8.2.0",
+    "restify": "^8.4.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/dotenv": "^6.1.0",
-    "@types/mocha": "^5.2.5",
-    "@types/restify": "^7.2.7",
-    "@types/sinon": "^7.0.5",
+    "@types/chai": "^4.2.4",
+    "@types/dotenv": "^6.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/restify": "^8.4.0",
+    "@types/sinon": "^7.5.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "sinon": "^7.2.3",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.2.4"
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   }
 }
