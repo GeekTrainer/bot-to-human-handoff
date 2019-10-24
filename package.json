@@ -3,7 +3,8 @@
     "test": "mocha -r ts-node/register src/tests/*.ts",
     "build-dev": "tsc",
     "start-dev": "nodemon ./lib/app.js",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "./lib/app.js"
   },
   "dependencies": {
     "botbuilder": "^4.6.0-preview1",
