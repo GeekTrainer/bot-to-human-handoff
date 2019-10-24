@@ -5,6 +5,8 @@ import { MemoryHandoffProvider } from './handoff-provider';
 import dotenv = require('dotenv');
 dotenv.config();
 
+console.log('starting server...');
+
 const server = restify.createServer();
 
 server.listen(3978, () => console.log('server up'));
@@ -25,7 +27,7 @@ adapter.onTurnError = async (context, error) => {
     await context.sendActivity(`Oops. Something went wrong!`);
 };
 
-server.get('/*', restify.plugins.serveStatic({directory: './public', default: 'index.html'}));
+server.get('/*', restify.plugins.serveStatic({directory: '../public', default: 'index.html'}));
 
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, async (context) => {
