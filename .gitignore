@@ -8,6 +8,7 @@
 
 ### TypeScript
 
+*.js
 lib
 
 ### Node ###
