@@ -9,7 +9,7 @@ console.log('starting server...');
 
 const server = restify.createServer();
 
-server.listen(3978, () => console.log('server up'));
+server.listen(process.env.PORT || process.env.port || 3978, () => console.log('server up'));
 
 const adapter = new BotFrameworkAdapter({
     appId: process.env.appId,
