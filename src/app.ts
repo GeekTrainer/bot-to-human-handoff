@@ -27,7 +27,7 @@ adapter.onTurnError = async (context, error) => {
     await context.sendActivity(`Oops. Something went wrong!`);
 };
 
-server.get('/*', restify.plugins.serveStatic({directory: '../public', default: 'index.html'}));
+server.get('/*', restify.plugins.serveStatic({directory: './public', default: 'index.html'}));
 
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, async (context) => {
